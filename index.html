@@ -50,14 +50,10 @@
             box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
         }
 
-        .hero-section {
-            padding: 120px 0 160px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section-padding {
-            padding: 80px 0;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .feature-card {
@@ -77,107 +73,14 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .test-form {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin: 20px 0;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-
-        .submit-btn {
-            background: #007bff;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #0056b3;
-        }
-
-        .success-message {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #28a745;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 10000;
-            font-weight: 600;
-        }
-
-        .hidden {
-            position: absolute !important;
-            left: -9999px !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-        }
-
-        .api-key-display {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 15px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            word-break: break-all;
-            position: relative;
-        }
-
-        .copy-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-
-        .copy-btn:hover {
-            background: #0056b3;
-        }
-
-        .konvertrix-section {
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-        }
-
-        .video-placeholder {
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-            aspect-ratio: 16/9;
-            border-radius: 1rem;
+        .hero-section {
+            padding: 120px 0 160px;
             position: relative;
             overflow: hidden;
+        }
+
+        .section-padding {
+            padding: 80px 0;
         }
 
         .play-button {
@@ -219,13 +122,21 @@
             }
         }
 
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
         .testimonial-card {
             background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
             border: 1px solid rgba(37, 99, 235, 0.2);
         }
 
-        .carousel-item {
-            transition: transform 0.6s ease-in-out;
+        .video-placeholder {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            aspect-ratio: 16/9;
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
         }
 
         .faq-item {
@@ -254,6 +165,108 @@
             color: var(--gray-600);
             line-height: 1.6;
         }
+
+        .stats-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .konvertrix-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+        }
+
+        .footer-section {
+            background-color: #1f2937;
+        }
+
+        /* Test Forms Styling */
+        .test-form {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+        }
+
+        .submit-btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+
+        /* Honeypot styling */
+        .sfl-honeypot-hidden {
+            position: absolute !important;
+            left: -9999px !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        /* Dashboard styling */
+        .api-key-display {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            word-break: break-all;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .copy-btn:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -272,19 +285,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="#integration">Integration</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#demo">Demo</a>
+                        <a class="nav-link" href="#examples">Examples</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#video">Video</a>
+                        <a class="nav-link" href="#demo">Test Demo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-primary fw-medium" href="#konvertrix">Konvertrix</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#dashboard">Dashboard</a>
                     </li>
                     <li class="nav-item ms-2">
                         <a class="btn btn-primary px-4" href="#get-started">Get Started</a>
@@ -322,19 +332,19 @@
             <!-- Stats Section -->
             <div class="row mt-5 pt-5">
                 <div class="col-md-4 mb-4">
-                    <div class="bg-white rounded-2xl p-6 text-center border border-gray-200" style="border-radius: 16px; padding: 24px;">
+                    <div class="stats-card rounded-4 p-4 text-center">
                         <div class="display-4 fw-bold text-primary mb-2">99.2%</div>
                         <div class="text-muted">Spam Detection Rate</div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="bg-white rounded-2xl p-6 text-center border border-gray-200" style="border-radius: 16px; padding: 24px;">
+                    <div class="stats-card rounded-4 p-4 text-center">
                         <div class="display-4 fw-bold text-success mb-2">50ms</div>
                         <div class="text-muted">Average Processing Time</div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="bg-white rounded-2xl p-6 text-center border border-gray-200" style="border-radius: 16px; padding: 24px;">
+                    <div class="stats-card rounded-4 p-4 text-center">
                         <div class="display-4 fw-bold text-purple mb-2">0.01%</div>
                         <div class="text-muted">False Positive Rate</div>
                     </div>
@@ -343,131 +353,8 @@
         </div>
     </section>
 
-    <!-- How We Help Section -->
-    <section class="section-padding bg-white">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4">How We Help You</h2>
-                    <p class="lead text-muted">
-                        Stop Fake Leads transforms your lead generation process by eliminating the biggest pain points that waste your time and money.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Carousel -->
-            <div id="helpCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <div class="card border-primary bg-light rounded-4 p-5">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6 text-center text-lg-start">
-                                    <div class="bg-primary rounded-4 d-inline-flex p-4 mb-4">
-                                        <i class="bi bi-clock text-white" style="font-size: 2rem;"></i>
-                                    </div>
-                                    <h3 class="h2 fw-bold mb-4">Eliminate Wasted Time Chasing Fake Leads</h3>
-                                    <p class="lead text-muted">
-                                        Stop spending hours following up on fake inquiries. Our system blocks spam before it reaches your inbox, so you only deal with real prospects who are genuinely interested in your services.
-                                    </p>
-                                </div>
-                                <div class="col-lg-6 text-center">
-                                    <div class="bg-primary bg-opacity-25 rounded-4 p-5" style="width: 300px; height: 300px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
-                                        <i class="bi bi-clock text-primary" style="font-size: 6rem;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <div class="card border-success bg-light rounded-4 p-5">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6 text-center text-lg-start">
-                                    <div class="bg-success rounded-4 d-inline-flex p-4 mb-4">
-                                        <i class="bi bi-bullseye text-white" style="font-size: 2rem;"></i>
-                                    </div>
-                                    <h3 class="h2 fw-bold mb-4">Improve Lead Quality & Conversion Rates</h3>
-                                    <p class="lead text-muted">
-                                        Higher quality leads mean better conversion rates. When every lead is real, your sales team becomes more efficient and your marketing ROI improves dramatically.
-                                    </p>
-                                </div>
-                                <div class="col-lg-6 text-center">
-                                    <div class="bg-success bg-opacity-25 rounded-4 p-5" style="width: 300px; height: 300px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
-                                        <i class="bi bi-bullseye text-success" style="font-size: 6rem;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                        <div class="card border-warning bg-light rounded-4 p-5">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6 text-center text-lg-start">
-                                    <div class="bg-warning rounded-4 d-inline-flex p-4 mb-4">
-                                        <i class="bi bi-shield-check text-white" style="font-size: 2rem;"></i>
-                                    </div>
-                                    <h3 class="h2 fw-bold mb-4">Protect Your Brand Reputation</h3>
-                                    <p class="lead text-muted">
-                                        Fake leads can damage your follow-up processes and customer experience. We ensure every interaction starts with a real person, maintaining your professional reputation.
-                                    </p>
-                                </div>
-                                <div class="col-lg-6 text-center">
-                                    <div class="bg-warning bg-opacity-25 rounded-4 p-5" style="width: 300px; height: 300px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
-                                        <i class="bi bi-shield-check text-warning" style="font-size: 6rem;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="carousel-item">
-                        <div class="card border-info bg-light rounded-4 p-5">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6 text-center text-lg-start">
-                                    <div class="bg-info rounded-4 d-inline-flex p-4 mb-4">
-                                        <i class="bi bi-people text-white" style="font-size: 2rem;"></i>
-                                    </div>
-                                    <h3 class="h2 fw-bold mb-4">Reduce Support Costs & Workload</h3>
-                                    <p class="lead text-muted">
-                                        Cut down on support tickets from fake inquiries. Your team can focus on helping real customers instead of dealing with spam, reducing operational costs significantly.
-                                    </p>
-                                </div>
-                                <div class="col-lg-6 text-center">
-                                    <div class="bg-info bg-opacity-25 rounded-4 p-5" style="width: 300px; height: 300px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
-                                        <i class="bi bi-people text-info" style="font-size: 6rem;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#helpCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#helpCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
-                </button>
-
-                <!-- Indicators -->
-                <div class="carousel-indicators position-relative mt-4">
-                    <button type="button" data-bs-target="#helpCarousel" data-bs-slide-to="0" class="active bg-primary"></button>
-                    <button type="button" data-bs-target="#helpCarousel" data-bs-slide-to="1" class="bg-primary"></button>
-                    <button type="button" data-bs-target="#helpCarousel" data-bs-slide-to="2" class="bg-primary"></button>
-                    <button type="button" data-bs-target="#helpCarousel" data-bs-slide-to="3" class="bg-primary"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section id="features" class="section-padding" style="background-color: var(--gray-50);">
+    <section class="section-padding" style="background-color: var(--gray-50);">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
@@ -518,287 +405,15 @@
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="section-padding bg-white">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4">Simple Integration, Powerful Results</h2>
-                    <p class="lead text-muted">
-                        Get started in minutes with our lightweight JavaScript snippet.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3 mb-4 text-center">
-                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px;">
-                        <span class="fw-bold fs-4">1</span>
-                    </div>
-                    <h3 class="h5 fw-bold mb-3">Add Script Tag</h3>
-                    <p class="text-muted">Copy our lightweight script to your website's head section.</p>
-                </div>
-
-                <div class="col-md-3 mb-4 text-center">
-                    <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px;">
-                        <span class="fw-bold fs-4">2</span>
-                    </div>
-                    <h3 class="h5 fw-bold mb-3">Configure Webhook</h3>
-                    <p class="text-muted">Set your destination URL for validated leads.</p>
-                </div>
-
-                <div class="col-md-3 mb-4 text-center">
-                    <div class="text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px; background-color: var(--primary-purple);">
-                        <span class="fw-bold fs-4">3</span>
-                    </div>
-                    <h3 class="h5 fw-bold mb-3">Automatic Filtering</h3>
-                    <p class="text-muted">Our system processes every submission in real-time.</p>
-                </div>
-
-                <div class="col-md-3 mb-4 text-center">
-                    <div class="bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px;">
-                        <span class="fw-bold fs-4">4</span>
-                    </div>
-                    <h3 class="h5 fw-bold mb-3">Receive Clean Leads</h3>
-                    <p class="text-muted">Only verified, real leads reach your CRM or inbox.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Customer Use Cases -->
-    <section class="section-padding" style="background-color: var(--gray-50);">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4">Real Stories, Real Results</h2>
-                    <p class="lead text-muted">
-                        See how businesses like yours are saving time and money with Stop Fake Leads.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row mb-5">
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-card card rounded-4 p-4 h-100">
-                        <i class="bi bi-quote text-primary fs-2 mb-3"></i>
-                        <p class="text-muted mb-4 fst-italic">
-                            "We were getting 200+ fake leads per day. After implementing Stop Fake Leads, we now get 15-20 high-quality leads that actually convert. Our sales team is finally productive again."
-                        </p>
-                        <div class="d-flex align-items-center">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                <span class="fw-bold">SM</span>
-                            </div>
-                            <div>
-                                <p class="fw-bold mb-0">Sarah Martinez</p>
-                                <small class="text-muted">Marketing Director, TechFlow Solutions</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-card card rounded-4 p-4 h-100">
-                        <i class="bi bi-quote text-success fs-2 mb-3"></i>
-                        <p class="text-muted mb-4 fst-italic">
-                            "Our lead quality improved by 85% overnight. We went from chasing fake inquiries to closing real deals. The ROI was immediate - we saved 20 hours per week on lead qualification."
-                        </p>
-                        <div class="d-flex align-items-center">
-                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                <span class="fw-bold">MJ</span>
-                            </div>
-                            <div>
-                                <p class="fw-bold mb-0">Michael Johnson</p>
-                                <small class="text-muted">CEO, Digital Marketing Pro</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-card card rounded-4 p-4 h-100">
-                        <i class="bi bi-quote fs-2 mb-3" style="color: var(--primary-purple);"></i>
-                        <p class="text-muted mb-4 fst-italic">
-                            "As a real estate agent, fake leads were costing me thousands in wasted follow-up time. Now every lead I get is a real person ready to buy or sell. Game changer!"
-                        </p>
-                        <div class="d-flex align-items-center">
-                            <div class="text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; background-color: var(--primary-purple);">
-                                <span class="fw-bold">LC</span>
-                            </div>
-                            <div>
-                                <p class="fw-bold mb-0">Lisa Chen</p>
-                                <small class="text-muted">Real Estate Agent, Premier Properties</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Use Cases -->
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card rounded-3 p-4 h-100">
-                        <div class="d-flex align-items-start">
-                            <div class="bg-warning bg-opacity-25 rounded-3 p-3 me-4">
-                                <i class="bi bi-people text-warning fs-4"></i>
-                            </div>
-                            <div>
-                                <h3 class="h5 fw-bold mb-3">E-commerce Stores</h3>
-                                <p class="text-muted mb-0">
-                                    Stop fake customer inquiries and focus on real buyers. Reduce support ticket volume by 70% while improving customer satisfaction.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 mb-4">
-                    <div class="card rounded-3 p-4 h-100">
-                        <div class="d-flex align-items-start">
-                            <div class="bg-danger bg-opacity-25 rounded-3 p-3 me-4">
-                                <i class="bi bi-bar-chart text-danger fs-4"></i>
-                            </div>
-                            <div>
-                                <h3 class="h5 fw-bold mb-3">Lead Generation Agencies</h3>
-                                <p class="text-muted mb-0">
-                                    Deliver higher quality leads to clients and increase retention rates. Agencies report 40% improvement in client satisfaction.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Konvertrix Special Section -->
-    <section id="konvertrix" class="konvertrix-section section-padding text-white">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="bi bi-star-fill text-warning fs-2 me-3"></i>
-                        <h2 class="display-4 fw-bold mb-0">Special: Konvertrix Form Protection</h2>
-                    </div>
-                    <p class="lead opacity-75">
-                        Protect your Konvertrix CRM clients with our specialized Bootstrap 5 form protection system.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="d-flex align-items-start mb-4">
-                        <div class="bg-white bg-opacity-20 rounded-3 p-3 me-4">
-                            <i class="bi bi-shield-check text-white fs-4"></i>
-                        </div>
-                        <div>
-                            <h3 class="h4 fw-bold mb-3">Bootstrap 5 Integration</h3>
-                            <p class="opacity-75">Seamlessly integrates with your existing Konvertrix landing pages without any design changes.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-start mb-4">
-                        <div class="bg-white bg-opacity-20 rounded-3 p-3 me-4">
-                            <i class="bi bi-people text-white fs-4"></i>
-                        </div>
-                        <div>
-                            <h3 class="h4 fw-bold mb-3">Client-Specific Protection</h3>
-                            <p class="opacity-75">Each client gets personalized spam filtering based on their user ID and form patterns.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-start">
-                        <div class="bg-white bg-opacity-20 rounded-3 p-3 me-4">
-                            <i class="bi bi-bar-chart text-white fs-4"></i>
-                        </div>
-                        <div>
-                            <h3 class="h4 fw-bold mb-3">Advanced Analytics</h3>
-                            <p class="opacity-75">Detailed reporting on blocked spam and lead quality improvements for your clients.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="bg-white bg-opacity-10 backdrop-blur rounded-4 p-5 border border-white border-opacity-20">
-                        <h3 class="h2 fw-bold mb-4">Ready for Konvertrix?</h3>
-                        <p class="opacity-75 mb-4">
-                            Give your clients the highest quality leads with our specialized protection system designed specifically for Konvertrix CRM forms.
-                        </p>
-                        <div class="d-grid gap-3">
-                            <a href="#dashboard" class="btn btn-light btn-lg fw-bold text-primary">
-                                View Konvertrix Dashboard
-                            </a>
-                            <a href="#demo" class="btn btn-outline-light btn-lg fw-bold">
-                                Test Protection System
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section id="video" class="section-padding bg-white">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4">A Message From Us & A Quick Look Inside</h2>
-                    <p class="lead text-muted mb-5">Click play below for a demo</p>
-                    
-                    <div class="position-relative">
-                        <div class="video-placeholder d-flex align-items-center justify-content-center cursor-pointer" data-bs-toggle="modal" data-bs-target="#videoModal">
-                            <div class="position-relative">
-                                <div class="play-button">
-                                    <i class="bi bi-play-fill text-primary fs-1"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Overlay content -->
-                        <div class="position-absolute bottom-0 start-0 p-4 text-white">
-                            <h3 class="h2 fw-bold mb-2">See Stop Fake Leads in Action</h3>
-                            <p class="opacity-75">Watch how our system protects your forms in real-time</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Modal -->
-    <div class="modal fade" id="videoModal" tabindex="-1">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body p-0">
-                    <div class="ratio ratio-16x9 bg-dark d-flex align-items-center justify-content-center">
-                        <div class="text-center text-white">
-                            <i class="bi bi-play-circle opacity-50" style="font-size: 4rem;"></i>
-                            <p class="h4 mt-3 mb-2">Demo Video Coming Soon</p>
-                            <p class="text-muted">This will showcase the Stop Fake Leads system in action</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Demo Section -->
-    <section id="demo" class="section-padding" style="background-color: var(--gray-50);">
+    <section id="demo" class="section-padding bg-white">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4">🛡️ Live Demo - Try It Now!</h2>
+                    <h2 class="display-4 fw-bold mb-4">Try It Live</h2>
                     <p class="lead text-muted">
                         Test our form protection system right now. Try to submit spam - we'll catch it!
                     </p>
-                    <div class="alert alert-info">
-                        <strong>💡 Pro Tip:</strong> Press F12 to open Developer Tools and watch the Console tab to see the protection system in action!
-                    </div>
                 </div>
             </div>
 
@@ -806,7 +421,7 @@
                 <div class="col-lg-6 mb-4">
                     <div class="test-form">
                         <h3 class="h4 fw-bold mb-4 text-success">✅ Normal Form (Should Pass)</h3>
-                        <p class="text-muted mb-4">Fill this out normally - take your time (5+ seconds), move your mouse, use a real email.</p>
+                        <p class="text-muted mb-4">Fill this out normally - take your time, use a real email.</p>
                         
                         <form id="normalForm">
                             <div class="form-group">
@@ -817,11 +432,6 @@
                             <div class="form-group">
                                 <label for="email">Email:</label>
                                 <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="company">Company:</label>
-                                <input type="text" id="company" name="company">
                             </div>
                             
                             <div class="form-group">
@@ -837,13 +447,7 @@
                 <div class="col-lg-6 mb-4">
                     <div class="test-form">
                         <h3 class="h4 fw-bold mb-4 text-danger">🚫 Spam Test (Should Block)</h3>
-                        <p class="text-muted mb-4"><strong>Try these spam techniques:</strong></p>
-                        <ul class="text-muted mb-4">
-                            <li>Submit immediately (under 2 seconds)</li>
-                            <li>Use fake email like "test@fake.com"</li>
-                            <li>Don't move your mouse</li>
-                            <li>Right-click → Inspect → Find hidden honeypot field and fill it</li>
-                        </ul>
+                        <p class="text-muted mb-4">Submit this quickly (under 2 seconds) or use fake email.</p>
                         
                         <form id="spamForm">
                             <div class="form-group">
@@ -858,7 +462,7 @@
                             
                             <div class="form-group">
                                 <label for="spamMessage">Message:</label>
-                                <textarea id="spamMessage" name="message" rows="4">This is a spam message with viagra and casino offers!</textarea>
+                                <textarea id="spamMessage" name="message" rows="4">Spam message with viagra offers!</textarea>
                             </div>
                             
                             <button type="submit" class="submit-btn">Submit Spam Form</button>
@@ -866,86 +470,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="section-padding bg-white">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4">Frequently Asked Questions</h2>
-                    <p class="lead text-muted">Everything you need to know about Stop Fake Leads</p>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item border-0 rounded-3 mb-3">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    Does this slow down my website?
-                                </button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Not at all! Our script is only 5KB and loads asynchronously, meaning it won't affect your page load speed. The validation happens in the background without any noticeable delay for real users.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item border-0 rounded-3 mb-3">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Will this impact my conversion rates?
-                                </button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Actually, it improves them! By eliminating fake submissions, you get a clearer picture of your true conversion rates. Real users experience no friction - the protection is completely invisible to legitimate visitors.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item border-0 rounded-3 mb-3">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    What percentage of fake leads will you catch?
-                                </button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Our system catches 99.2% of spam and fake submissions while maintaining a false positive rate of only 0.01%. This means virtually all spam is blocked while real leads always get through.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item border-0 rounded-3 mb-3">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    How quickly can I get this set up?
-                                </button>
-                            </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Setup takes less than 5 minutes! Just add our script tag to your website's header, configure your webhook URL in the dashboard, and you're protected. No form modifications needed.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item border-0 rounded-3 mb-3">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    Does it work with my existing CRM?
-                                </button>
-                            </h2>
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Yes! Stop Fake Leads works with any CRM or form system including HubSpot, Salesforce, Pipedrive, and custom solutions. We validate leads before they reach your CRM, so only clean data enters your system.
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-info">
+                        <strong>💡 Pro Tip:</strong> Open your browser's developer tools (F12) and watch the Console tab to see the protection system in action!
                     </div>
                 </div>
             </div>
@@ -953,7 +482,7 @@
     </section>
 
     <!-- Dashboard Section -->
-    <section id="dashboard" class="section-padding" style="background-color: var(--gray-50);">
+    <section id="get-started" class="section-padding" style="background-color: var(--gray-50);">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
@@ -1019,24 +548,68 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="get-started" class="konvertrix-section section-padding text-white">
+    <!-- Konvertrix Special Section -->
+    <section class="konvertrix-section section-padding text-white">
         <div class="container">
-            <div class="row justify-content-center text-center">
+            <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4">Ready to Stop Spam Forever?</h2>
-                    <p class="lead opacity-75 mb-5">
-                        Join thousands of businesses already protecting their lead generation with Stop Fake Leads.
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="bi bi-star-fill text-warning fs-2 me-3"></i>
+                        <h2 class="display-4 fw-bold mb-0">Special: Konvertrix Form Protection</h2>
+                    </div>
+                    <p class="lead opacity-75">
+                        Protect your Konvertrix CRM clients with our specialized Bootstrap 5 form protection system.
                     </p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                        <a href="#dashboard" class="btn btn-light btn-lg text-primary px-5 py-3 fw-bold">
-                            Start Your Free Trial
-                            <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                        <a href="#konvertrix" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold">
-                            Konvertrix Protection
-                            <i class="bi bi-shield-check ms-2"></i>
-                        </a>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="bg-white bg-opacity-20 rounded-3 p-3 me-4">
+                            <i class="bi bi-shield-check text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h3 class="h4 fw-bold mb-3">Bootstrap 5 Integration</h3>
+                            <p class="opacity-75">Seamlessly integrates with your existing Konvertrix landing pages without any design changes.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="bg-white bg-opacity-20 rounded-3 p-3 me-4">
+                            <i class="bi bi-people text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h3 class="h4 fw-bold mb-3">Client-Specific Protection</h3>
+                            <p class="opacity-75">Each client gets personalized spam filtering based on their user ID and form patterns.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start">
+                        <div class="bg-white bg-opacity-20 rounded-3 p-3 me-4">
+                            <i class="bi bi-bar-chart text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h3 class="h4 fw-bold mb-3">Advanced Analytics</h3>
+                            <p class="opacity-75">Detailed reporting on blocked spam and lead quality improvements for your clients.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="bg-white bg-opacity-10 backdrop-blur rounded-4 p-5 border border-white border-opacity-20">
+                        <h3 class="h2 fw-bold mb-4">Ready for Konvertrix?</h3>
+                        <p class="opacity-75 mb-4">
+                            Give your clients the highest quality leads with our specialized protection system designed specifically for Konvertrix CRM forms.
+                        </p>
+                        <div class="d-grid gap-3">
+                            <a href="#konvertrix" class="btn btn-light btn-lg fw-bold text-primary">
+                                View Konvertrix Dashboard
+                            </a>
+                            <a href="#demo" class="btn btn-outline-light btn-lg fw-bold">
+                                Test Protection System
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1044,7 +617,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-5 text-white" style="background-color: #1f2937;">
+    <footer class="footer-section py-5 text-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-3 mb-md-0">
@@ -1055,11 +628,11 @@
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex flex-wrap justify-content-md-end gap-4">
-                        <a href="#features" class="text-light text-decoration-none">Features</a>
-                        <a href="#demo" class="text-light text-decoration-none">Demo</a>
-                        <a href="#video" class="text-light text-decoration-none">Video</a>
+                        <a href="#integration" class="text-light text-decoration-none">Integration Guide</a>
+                        <a href="#examples" class="text-light text-decoration-none">Examples</a>
+                        <a href="#demo" class="text-light text-decoration-none">Test Demo</a>
                         <a href="#konvertrix" class="text-light text-decoration-none">Konvertrix</a>
-                        <a href="#dashboard" class="text-light text-decoration-none">Dashboard</a>
+                        <a href="#get-started" class="text-light text-decoration-none">Dashboard</a>
                     </div>
                 </div>
             </div>
@@ -1070,305 +643,11 @@
         </div>
     </footer>
 
-    <!-- Protection Indicator -->
-    <div style="position: fixed; bottom: 20px; right: 20px; background: rgba(40, 167, 69, 0.9); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000;">
-        🛡️ Forms Protected by Stop Fake Leads
-    </div>
-
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Stop Fake Leads Protection Script -->
-    <script>
-        (function() {
-            'use strict';
-            
-            // Stop Fake Leads Protection System
-            const StopFakeLeads = {
-                config: {
-                    apiKey: null,
-                    debug: true
-                },
-                
-                behaviorData: {
-                    pageLoadTime: Date.now(),
-                    mouseMovements: 0,
-                    keystrokes: 0,
-                    clicks: 0,
-                    scrolls: 0
-                },
-                
-                init: function() {
-                    this.log('🛡️ Stop Fake Leads Protection Activated');
-                    this.generateApiKey();
-                    this.setupFormProtection();
-                    this.trackBehavior();
-                    this.updateDashboard();
-                },
-                
-                generateApiKey: function() {
-                    let apiKey = localStorage.getItem('sfl_api_key');
-                    if (!apiKey) {
-                        const timestamp = Date.now();
-                        const random = Math.random().toString(36).substring(2, 15);
-                        apiKey = `sfl_${timestamp}_${random}`;
-                        localStorage.setItem('sfl_api_key', apiKey);
-                    }
-                    this.config.apiKey = apiKey;
-                    return apiKey;
-                },
-                
-                updateDashboard: function() {
-                    const apiKeyElement = document.getElementById('apiKeyText');
-                    const scriptElement = document.getElementById('scriptText');
-                    
-                    if (apiKeyElement) {
-                        apiKeyElement.textContent = this.config.apiKey;
-                    }
-                    
-                    if (scriptElement) {
-                        const scriptTag = `<script async src="${window.location.origin}/sfl.js" data-api-key="${this.config.apiKey}"></script>`;
-                        scriptElement.textContent = scriptTag;
-                    }
-                },
-                
-                setupFormProtection: function() {
-                    const forms = document.querySelectorAll('form');
-                    forms.forEach(form => this.protectForm(form));
-                },
-                
-                protectForm: function(form) {
-                    if (form.dataset.sflProtected) return;
-                    
-                    form.dataset.sflProtected = 'true';
-                    this.log('🔒 Protecting form:', form.id || 'unnamed');
-                    
-                    // Add honeypot
-                    this.addHoneypot(form);
-                    
-                    // Track interactions
-                    this.trackFormInteraction(form);
-                    
-                    // Override submission
-                    form.addEventListener('submit', (e) => this.handleSubmit(e, form));
-                },
-                
-                addHoneypot: function(form) {
-                    if (form.querySelector('.sfl-honeypot')) return;
-                    
-                    const honeypot = document.createElement('input');
-                    honeypot.type = 'text';
-                    honeypot.name = 'website';
-                    honeypot.className = 'sfl-honeypot hidden';
-                    honeypot.tabIndex = -1;
-                    honeypot.autocomplete = 'off';
-                    
-                    form.appendChild(honeypot);
-                    this.log('🍯 Added honeypot to form');
-                },
-                
-                trackBehavior: function() {
-                    document.addEventListener('mousemove', () => this.behaviorData.mouseMovements++);
-                    document.addEventListener('keydown', () => this.behaviorData.keystrokes++);
-                    document.addEventListener('click', () => this.behaviorData.clicks++);
-                    document.addEventListener('scroll', () => this.behaviorData.scrolls++);
-                },
-                
-                trackFormInteraction: function(form) {
-                    const inputs = form.querySelectorAll('input, textarea, select');
-                    inputs.forEach(input => {
-                        input.addEventListener('focus', () => {
-                            if (!form.dataset.sflFirstFocus) {
-                                form.dataset.sflFirstFocus = Date.now().toString();
-                            }
-                        });
-                    });
-                },
-                
-                handleSubmit: function(e, form) {
-                    e.preventDefault();
-                    this.log('📝 Form submission intercepted');
-                    
-                    const formData = this.collectFormData(form);
-                    const validationData = this.prepareValidationData(form, formData);
-                    
-                    this.validateSubmission(validationData)
-                        .then(result => {
-                            if (result.allowed) {
-                                this.log('✅ Submission ALLOWED', result);
-                                this.showSuccess('Form submitted successfully! ✅');
-                            } else {
-                                this.log('🚫 Submission BLOCKED', result);
-                                // Show success to user (don't reveal the block)
-                                this.showSuccess('Form submitted successfully! ✅');
-                            }
-                            form.reset();
-                        })
-                        .catch(error => {
-                            this.log('❌ Validation error:', error);
-                            this.showSuccess('Form submitted successfully! ✅');
-                            form.reset();
-                        });
-                },
-                
-                collectFormData: function(form) {
-                    const formData = new FormData(form);
-                    const data = {};
-                    for (let [key, value] of formData.entries()) {
-                        data[key] = value;
-                    }
-                    return data;
-                },
-                
-                prepareValidationData: function(form, formData) {
-                    const now = Date.now();
-                    const firstFocus = parseInt(form.dataset.sflFirstFocus) || now;
-                    const submissionSpeed = now - firstFocus;
-                    
-                    return {
-                        apiKey: this.config.apiKey,
-                        formData: formData,
-                        metadata: {
-                            timestamp: new Date().toISOString(),
-                            userAgent: navigator.userAgent,
-                            referrer: document.referrer,
-                            url: window.location.href,
-                            submissionSpeed: submissionSpeed,
-                            behaviorData: this.behaviorData
-                        },
-                        honeypotValue: formData.website || ''
-                    };
-                },
-                
-                validateSubmission: function(data) {
-                    // Simulate validation logic
-                    return new Promise((resolve) => {
-                        setTimeout(() => {
-                            let riskScore = 0;
-                            const reasons = [];
-                            
-                            // Check honeypot
-                            if (data.honeypotValue && data.honeypotValue.trim() !== '') {
-                                riskScore += 60;
-                                reasons.push('honeypot_filled');
-                            }
-                            
-                            // Check submission speed
-                            if (data.metadata.submissionSpeed < 2000) {
-                                riskScore += 35;
-                                reasons.push('too_fast');
-                            }
-                            
-                            // Check behavior
-                            if (data.metadata.behaviorData.mouseMovements < 5) {
-                                riskScore += 25;
-                                reasons.push('no_mouse_movement');
-                            }
-                            
-                            // Check email
-                            if (data.formData.email && !data.formData.email.includes('@')) {
-                                riskScore += 30;
-                                reasons.push('invalid_email');
-                            }
-                            
-                            // Check for spam keywords
-                            const message = (data.formData.message || '').toLowerCase();
-                            if (message.includes('viagra') || message.includes('casino') || message.includes('spam')) {
-                                riskScore += 40;
-                                reasons.push('spam_content');
-                            }
-                            
-                            const result = {
-                                allowed: riskScore < 50,
-                                riskScore: Math.min(100, riskScore),
-                                reasons: reasons,
-                                processingTime: Math.floor(Math.random() * 50) + 20
-                            };
-                            
-                            resolve(result);
-                        }, 500);
-                    });
-                },
-                
-                showSuccess: function(message) {
-                    const successDiv = document.createElement('div');
-                    successDiv.className = 'success-message';
-                    successDiv.textContent = message;
-                    document.body.appendChild(successDiv);
-                    
-                    setTimeout(() => {
-                        if (successDiv.parentNode) {
-                            successDiv.parentNode.removeChild(successDiv);
-                        }
-                    }, 3000);
-                },
-                
-                log: function(message, data) {
-                    if (this.config.debug) {
-                        console.log('[Stop Fake Leads]', message, data || '');
-                    }
-                }
-            };
-            
-            // Initialize when DOM is ready
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => StopFakeLeads.init());
-            } else {
-                StopFakeLeads.init();
-            }
-            
-            // Expose for debugging
-            window.StopFakeLeads = StopFakeLeads;
-        })();
-        
-        // Copy functions for dashboard
-        function copyApiKey() {
-            const apiKey = document.getElementById('apiKeyText').textContent;
-            navigator.clipboard.writeText(apiKey).then(() => {
-                const btn = event.target;
-                const originalText = btn.textContent;
-                btn.textContent = 'Copied!';
-                btn.style.background = '#28a745';
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.background = '#007bff';
-                }, 2000);
-            });
-        }
-        
-        function copyScript() {
-            const script = document.getElementById('scriptText').textContent;
-            navigator.clipboard.writeText(script).then(() => {
-                const btn = event.target;
-                const originalText = btn.textContent;
-                btn.textContent = 'Copied!';
-                btn.style.background = '#28a745';
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.background = '#007bff';
-                }, 2000);
-            });
-        }
-        
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Auto-advance carousel
-        const helpCarousel = new bootstrap.Carousel('#helpCarousel', {
-            interval: 5000,
-            wrap: true
-        });
-    </script>
+    <!-- Load our protection scripts -->
+    <script src="spam-protection.js"></script>
+    <script src="utils.js"></script>
 </body>
 </html>
